@@ -44,7 +44,7 @@ function deleteSubmissionByIndex(array,index){
 
 
 function deleteSubmissionByName(array, name){
-    let indexPosition = array.findIndex(submission => submission.name === name);
+   let indexPosition = array.findIndex(submission => submission.name === name);
    array.splice([indexPosition], 1);
    console.log(submissions);
     
@@ -52,7 +52,7 @@ function deleteSubmissionByName(array, name){
 
 console.log(deleteSubmissionByName(submissions, "Joe"));
 
-editSubmision = function(array,index,score){
+function editSubmision(array,index,score){
     array[index].score = score;
     if(score < 60){
         array[index].passed = false;
@@ -62,15 +62,18 @@ editSubmision = function(array,index,score){
     }
 
 }
+console.log(submissions);
 editSubmision(submissions, 1, 99);
 console.log(submissions);
 
 
 findSubmissionByName = function(array, name){
     let foundName = array.find(sub => sub.name === name);
-    console.log(foundName);
+    return foundName;
    
 }
+
+console.log("Potatoe");
 console.log(findSubmissionByName(submissions, "Jack"));
 
 
